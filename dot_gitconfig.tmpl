@@ -1,7 +1,7 @@
 [user]
   name = Tuomas Tielinen
   email = {{ .email | quote }}
-{{- if eq .chezmoi.hostname "ALL0005" }}
+{{- if eq .chezmoi.fqdnHostname "boxkit.ALL0005" }}
 [pull]
   rebase = false
 [commit]
