@@ -5,6 +5,6 @@ alias la='ls -a --color=auto'
 alias lla='ls -la --color=auto'
 alias lt='ls --tree --color=auto'
 
-{{- if eq .chezmoi.hostname "ALL0005" }}
+{{- if eq .chezmoi.fqdnHostname "boxkit.ALL0005" }}
 alias up='sudo dnf check-update; echo "Update advisories:"; sudo dnf updateinfo --info; sudo dnf upgrade -y; flatpak update -y'
 {{- end }}

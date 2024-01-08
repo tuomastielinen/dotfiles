@@ -25,11 +25,6 @@ fi
 
 unset rc
 
-{{- if eq .chezmoi.hostname "ALL0005" }}
-export EDITOR=/usr/bin/code
-{{- end }}
-{{- if eq .chezmoi.hostname "thinkpad" }}
 export EDITOR=/usr/bin/nvim
-{{- end }}
 
 eval "$(starship init bash)"
