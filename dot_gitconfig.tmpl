@@ -1,5 +1,13 @@
 [user]
-	name = Tuomas Tielinen
-	email = {{ .email | quote }}
+  name = Tuomas Tielinen
+  email = {{ .email | quote }}
+{{- if eq .chezmoi.hostname "ALL0005" }}
+[pull]
+  rebase = false
+[commit]
+  gpgsign = false
+[credential]
+  helper = store
+{{- end }}
 [init]
-	defaultBranch = main
+  defaultBranch = main
